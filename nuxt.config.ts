@@ -19,8 +19,10 @@ export default defineNuxtConfig({
       '/contact',  // Add your routes here
     ],
   },
-  router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt3-demo/' : '/', // Replace 'repository-name' with your GitHub repository name
-  },
+ runtimeConfig: {
+  public:{
+    wpUri:process.env.WP_URI_
+  }
+ }
   
 })

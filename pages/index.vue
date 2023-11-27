@@ -5,7 +5,7 @@ export { posts };
  
 //  const { data: posts, error } = useFetch("http://localhost/shv/wp-json/wp/v2/posts?_embed=1");
 
- const { data: posts, error } = useFetch(" http://beta.niyogin.com/wp-json/wp/v2/posts?_embed=1");
+ const { data: posts, error } = useFetch(" http://docs.niyogin.com/wp-json/wp/v2/posts?_embed=1");
  // Ensure 'posts' is exposed for use in the template
 
  </script>
@@ -22,8 +22,8 @@ export { posts };
             <h2 class="text-xl font-bold mb-4">{{ post.title.rendered }}</h2>
             <!-- Add more content as needed ? -->
             <img v-if="post.featured_media" :src="post._embedded['wp:featuredmedia'][0]?.source_url" alt="Blog Image" class="mb-4 rounded-md">
-            <!-- Example: Link to the blog post using the slug -->
-            <router-link :to="'/' + post.slug" class="text-blue-500 hover:underline">Read more</router-link>
+            <!-- Example: Link to the blog post using the slug 
+            <router-link :to="'/' + post.slug" class="text-blue-500 hover:underline">Read more</router-link>-->
           </div>
         </div>
   
